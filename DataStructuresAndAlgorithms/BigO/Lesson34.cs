@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 
 namespace DataStructuresAndAlgorithms.BigO
 {
-    public class Lesson27
+    class Lesson34
     {
         public void Run()
         {
@@ -11,26 +13,20 @@ namespace DataStructuresAndAlgorithms.BigO
             var everyone = new string[] { "dory", "bruce", "marlin", "nemo", "gill", "bloat", "nigel", "squirt", "darla", "hank" };
             var large = Enumerable.Repeat("nemo", 100000).ToArray();
 
-            FindNemo(large); // O(n) --> Linear Time
+            FindNemo(large); // O(n) -> Big O only cares about the worst case scenario
         }
 
         private void FindNemo(string[] array)
         {
-            // Time elapsed is unimportant for the purposes of Big O notation
-
-            //var timer = new Stopwatch();
-            //timer.Start();
-
             for (int i = 0; i < array.Length; i++)
             {
+                Console.WriteLine("running");
                 if (array[i] == "nemo")
                 {
                     Console.WriteLine("Found NEMO!");
+                    break;
                 }
             }
-
-            //timer.Stop();
-            //Console.WriteLine("Call to find Nemo took " + timer.ElapsedMilliseconds + " miliseconds");
         }
     }
 }

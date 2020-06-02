@@ -10,7 +10,7 @@ namespace DataStructuresAndAlgorithms.BigO
         {
             var nemo = new string[] { "nemo" };
             var everyone = new string[] { "dory", "bruce", "marlin", "nemo", "gill", "bloat", "nigel", "squirt", "darla", "hank" };
-            var large = Enumerable.Repeat("nemo", 10000).ToArray();
+            var large = Enumerable.Repeat("nemo", 100000).ToArray();
 
             FindNemo(large);
         }
