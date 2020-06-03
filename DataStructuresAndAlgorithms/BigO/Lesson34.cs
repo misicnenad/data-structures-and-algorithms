@@ -17,7 +17,7 @@ namespace DataStructuresAndAlgorithms.BigO
         // "Big O" value: O(n) --> Worst case
         private void FindNemo(string[] array)
         {
-            for (int i = 0; i < array.Length; i++)
+            for (var i= 0; i < array.Length; i++)
             {
                 Console.WriteLine("running");
                 if (array[i] == "nemo")

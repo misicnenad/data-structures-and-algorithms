@@ -22,7 +22,7 @@ namespace DataStructuresAndAlgorithms.BigO
             //var timer = new Stopwatch();
             //timer.Start();
 
-            for (int i = 0; i < array.Length; i++)
+            for (var i= 0; i < array.Length; i++)
             {
                 if (array[i] == "nemo")
                 {

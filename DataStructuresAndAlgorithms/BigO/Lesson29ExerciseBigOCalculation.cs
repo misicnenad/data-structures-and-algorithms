@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace DataStructuresAndAlgorithms.BigO
 {
-    public class ExerciseBigOCalculation
+    public class Lesson29ExerciseBigOCalculation
     {
         public void Run()
         {
@@ -18,7 +18,7 @@ namespace DataStructuresAndAlgorithms.BigO
             var a = 10; // O(1)
             a = 50 + 3; // O(1)
 
-            for (int i = 0; i < input.Length; i++)  // O(n)
+            for (var i= 0; i < input.Length; i++)  // O(n)
             {
                 AnotherFunction(); // O(n)
                 var stranger = true; // O(n)

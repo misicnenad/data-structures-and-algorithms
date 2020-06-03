@@ -25,7 +25,7 @@ namespace DataStructuresAndAlgorithms.BigO
                 index++;
             }
 
-            for (int i = 0; i < 100; i++) // O(100)
+            for (var i= 0; i < 100; i++) // O(100)
             {
                 Console.WriteLine("hi");
             }

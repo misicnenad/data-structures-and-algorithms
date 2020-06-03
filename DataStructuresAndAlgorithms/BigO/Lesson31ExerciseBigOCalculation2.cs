@@ -1,6 +1,6 @@
 ﻿namespace DataStructuresAndAlgorithms.BigO
 {
-    public class ExerciseBigOCalculation2
+    public class Lesson31ExerciseBigOCalculation2
     {
         public void Run()
         {
@@ -16,7 +16,7 @@
             var b = 10; // O(1)
             var c = 50; // O(1)
 
-            for (int i = 0; i < input; i++)
+            for (var i= 0; i < input; i++)
             {
                 var x = i + 1; // O(n)
                 var y = i + 2; // O(n)
