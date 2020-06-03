@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace DataStructuresAndAlgorithms.BigO
+namespace DataStructuresAndAlgorithms.Section4
 {
     public class Lesson54
     {

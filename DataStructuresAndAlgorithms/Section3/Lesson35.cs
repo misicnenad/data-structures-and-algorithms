@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DataStructuresAndAlgorithms.BigO
+namespace DataStructuresAndAlgorithms.Section3
 {
     public class Lesson35
     {

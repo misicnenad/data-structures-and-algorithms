@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using System.Linq;
 
-namespace DataStructuresAndAlgorithms.BigO
+namespace DataStructuresAndAlgorithms.Section3
 {
     public class Lesson26
     {

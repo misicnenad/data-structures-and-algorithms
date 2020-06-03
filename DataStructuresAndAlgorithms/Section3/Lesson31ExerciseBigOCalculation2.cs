@@ -1,4 +1,4 @@
-﻿namespace DataStructuresAndAlgorithms.BigO
+﻿namespace DataStructuresAndAlgorithms.Section3
 {
     public class Lesson31ExerciseBigOCalculation2
     {

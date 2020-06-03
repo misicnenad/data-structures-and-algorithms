@@ -1,4 +1,4 @@
-﻿using DataStructuresAndAlgorithms.BigO;
+﻿using DataStructuresAndAlgorithms.Section4;
 
 namespace DataStructuresAndAlgorithms
 {

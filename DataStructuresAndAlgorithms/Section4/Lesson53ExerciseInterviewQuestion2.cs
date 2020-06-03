@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace DataStructuresAndAlgorithms.BigO
+namespace DataStructuresAndAlgorithms.Section4
 {
     public class Lesson53ExerciseInterviewQuestion2
     {
