@@ -6,7 +6,7 @@ namespace DataStructuresAndAlgorithms
     {
         static void Main(string[] args)
         {
-            var lesson = new Lesson44ExerciseSpaceComplexity();
+            var lesson = new Lesson53ExerciseInterviewQuestion2();
             lesson.Run();
         }
     }

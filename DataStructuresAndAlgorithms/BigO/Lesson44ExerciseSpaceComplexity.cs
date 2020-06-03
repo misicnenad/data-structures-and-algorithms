@@ -14,7 +14,7 @@ namespace DataStructuresAndAlgorithms.BigO
             Console.WriteLine(string.Join(" ", hiArray));
         }
 
-        // Space complexity "Big O" value: O(1)
+        // Space complexity value: O(1)
         private void Booooo(int[] n)
         {
             for (var i= 0; i < n.Length; i++)
@@ -23,7 +23,7 @@ namespace DataStructuresAndAlgorithms.BigO
             }
         }
 
-        // Space complexity "Big O" value: O(n)
+        // Space complexity value: O(n)
         private string[] ArrayOfHiNTimes(int n)
         {
             var hiArray = new string[n];
