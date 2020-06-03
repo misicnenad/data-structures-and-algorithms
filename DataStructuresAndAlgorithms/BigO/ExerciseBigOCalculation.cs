@@ -12,7 +12,7 @@ namespace DataStructuresAndAlgorithms.BigO
             FunChallenge(input);
         }
 
-        // Big O = O(3 + 4n) = O(n)
+        // "Big O" Value: O(3 + 4n) = O(n)
         private int FunChallenge(object[] input)
         {
             var a = 10; // O(1)

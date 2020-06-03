@@ -11,9 +11,10 @@ namespace DataStructuresAndAlgorithms.BigO
             var everyone = new string[] { "dory", "bruce", "marlin", "nemo", "gill", "bloat", "nigel", "squirt", "darla", "hank" };
             var large = Enumerable.Repeat("nemo", 100000).ToArray();
 
-            FindNemo(large); // O(n) --> Linear Time
+            FindNemo(large);
         }
 
+        // "Big O" Value: O(n) --> Linear Time
         private void FindNemo(string[] array)
         {
             // Time elapsed is unimportant for the purposes of Big O notation

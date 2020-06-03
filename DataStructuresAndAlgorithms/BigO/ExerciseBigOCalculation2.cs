@@ -9,7 +9,7 @@
             AnotherFunChallenge(input);
         }
 
-        // Big O = O(4 + 5n) = O(n)
+        // "Big O" Value: O(4 + 5n) = O(n)
         private void AnotherFunChallenge(int input)
         {
             var a = 5; // O(1)

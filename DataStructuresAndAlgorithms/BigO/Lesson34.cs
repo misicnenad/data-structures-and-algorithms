@@ -1,11 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace DataStructuresAndAlgorithms.BigO
 {
-    class Lesson34
+    public class Lesson34
     {
         public void Run()
         {
@@ -13,9 +11,10 @@ namespace DataStructuresAndAlgorithms.BigO
             var everyone = new string[] { "dory", "bruce", "marlin", "nemo", "gill", "bloat", "nigel", "squirt", "darla", "hank" };
             var large = Enumerable.Repeat("nemo", 100000).ToArray();
 
-            FindNemo(large); // O(n) -> Big O only cares about the worst case scenario
+            FindNemo(large);
         }
 
+        // "Big O" Value: O(n) --> Big O only cares about the worst case scenario
         private void FindNemo(string[] array)
         {
             for (int i = 0; i < array.Length; i++)
