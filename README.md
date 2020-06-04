@@ -4,7 +4,7 @@ A C# implementation of the exercises found in the Udemy course ["Master the Codi
 
 Lessons are implemented as interchangeble classes separated into namespaces named by the course Sections they appear in. Only the lessons that included significant coding were included in this repo.
 
-Class name format is:
+Class name formats are:
 - For theory: *Lesson + lesson_number* (e.g. `Lesson65.cs`)
 - For exercises: *Lesson + lesson_number + exercise_name* (e.g. `Lesson29ExerciseBigOCalculation.cs`)
 
