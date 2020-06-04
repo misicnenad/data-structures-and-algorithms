@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 
 namespace DataStructuresAndAlgorithms.Section6
 {
@@ -7,50 +8,71 @@ namespace DataStructuresAndAlgorithms.Section6
     {
         public void Run()
         {
-            var array1 = new int[] { 0, 3, 4, 31 };
-            var array2 = new int[] { 4, 6, 30 };
-            var result = MergeSortedArrays(array1, array2);
-
-            Console.WriteLine(string.Join(" ", result));
+            var result = Reverse("Hi My name is Andrei!");
+            Console.WriteLine(result);
         }
 
-        private int[] MergeSortedArrays(int[] array1, int[] array2)
+        // Create a function that reverses a string:
+        // 'Hi My name is Andrei!' should be:
+        // 'ierdnA si eman yM iH'
+        private string Reverse(string str)
         {
-            var mergedLength = array1.Length + array2.Length;
-            var mergedArray = new List<int>(mergedLength);
-
-            int? array1Item = array1[0];
-            int? array2Item = array2[0];
-            var i = 0;
-            var j = 0;
-
-            if (array1.Length == 0)
+            if (string.IsNullOrEmpty(str) || str.Length < 2)
             {
-                return array2;
-            }
-            if (array2.Length == 0)
-            {
-                return array1;
+                return "hmm that is not good";
             }
 
-            while ((array1Item != null || array2Item != null)
-                && (i < array1.Length || j < array2.Length))
+            var backwards = new List<char>();
+            var totalItems = str.Length - 1;
+            for (var i = totalItems; i >= 0; i--)
             {
-                if (array2Item is null || array1Item < array2Item)
+                backwards.Add(str[i]);
+            }
+
+            var result = string.Join(string.Empty, backwards);
+            Console.WriteLine(result);
+
+            return result;
+        }
+
+        public string ReverseCSharpWay(string s)
+        {
+            char[] charArray = s.ToCharArray();
+            Array.Reverse(charArray);
+            return new string(charArray);
+        }
+
+        private string ReverseCSharpWayMoreEfficient(string str)
+        {
+            return string.Create(str.Length, str, (chars, state) =>
+            {
+                var enumerator = StringInfo.GetTextElementEnumerator(state);
+                var position = state.Length;
+                while (enumerator.MoveNext())
                 {
-                    mergedArray.Add(array1Item.Value);
-                    array1Item = array1[i];
-                    i++;
+                    var cluster = ((string) enumerator.Current).AsSpan();
+                    cluster.CopyTo(chars.Slice(position - cluster.Length));
+                    position -= cluster.Length;
                 }
-                else
-                {
-                    mergedArray.Add(array2Item.Value);
-                    array2Item = array2[j];
-                    j++;
-                }
-            }
+            });
+        }
 
-            return mergedArray.ToArray();
+        private string ReverseCSharpWayMostEfficient(string str)
+        {
+            return string.Create(str.Length, str, (chars, state) =>
+            {
+                var position = 0;
+                var stateSpan = state.AsSpan();
+                var indexes = StringInfo.ParseCombiningCharacters(state); // skips string creation
+                var len = indexes.Length;
+                for (var i = len - 1; i >= 0; i--)
+                {
+                    var index = indexes[i];
+                    var spanLength = i == len - 1 ? state.Length - index : indexes[i + 1] - index;
+                    stateSpan.Slice(index, spanLength).CopyTo(chars.Slice(position));
+                    position += spanLength;
+                }
+            });
         }
     }
 }
