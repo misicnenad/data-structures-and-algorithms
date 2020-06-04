@@ -1,4 +1,5 @@
 ﻿using DataStructuresAndAlgorithms.Section4;
+using DataStructuresAndAlgorithms.Section6;
 
 namespace DataStructuresAndAlgorithms
 {
@@ -6,7 +7,7 @@ namespace DataStructuresAndAlgorithms
     {
         static void Main(string[] args)
         {
-            var lesson = new Lesson54();
+            var lesson = new Lesson62();
             lesson.Run();
         }
     }
