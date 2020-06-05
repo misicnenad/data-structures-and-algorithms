@@ -6,7 +6,7 @@ A C# implementation of the exercises found in the Udemy course ["Master the Codi
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-Lessons are implemented as interchangeble classes. Each course section containing the lessons is represented as a separate namespace. Only the lessons that included any significant coding were included in this repo.
+Lessons in the course are implemented as interchangeble classes. Each course section is represented as a separate namespace. Only the lessons that included any significant coding were included in this repo.
 
 Class name formats are:
 - For course lessons: *Lesson + lesson_number + lesson_name* (e.g. `Lesson26BigOAndScalability.cs`)
@@ -15,7 +15,7 @@ Class name formats are:
 ### Prerequisites
 
 You will need the .NET Core version 3.1 (link to download [here](https://dotnet.microsoft.com/download)).
-.NET Core 2.2 is also supported, set the `<TargetFramework>` tag in `DataStructuresAndAlgorithms.csproj` to:
+.NET Core 2.2 is also supported, just set the `<TargetFramework>` tag in `DataStructuresAndAlgorithms.csproj` to:
 
 ```
 <TargetFramework>netcoreapp2.2</TargetFramework>
@@ -23,11 +23,11 @@ You will need the .NET Core version 3.1 (link to download [here](https://dotnet.
 
 ### Installing
 
-Simply clone the repository to your local machine and run the project. It's that simple!
+Simply clone the repository to your local machine and run the project. It's really that simple!
 
-To run a specific lesson example go to `Program.cs` file and swap the lesson class to the desired one and start the application.
+To run a specific lesson example go to `Program.cs` and swap the lesson class to the desired one and run the application.
 
-Example to start *Lesson 76. - Hash Collisions*:
+Example for running *Lesson 76. - Hash Collisions*:
 ```
 static void Main(string[] args)
 {
