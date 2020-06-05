@@ -10,11 +10,16 @@ namespace DataStructuresAndAlgorithms.Section6
         {
             array ??= _defaultArray;
 
-            var result = MaxSubarrayBigONSquared(array);
+            var result = MaxSubarrayBigON(array);
 
             Console.WriteLine(result);
         }
 
+        // Explanation: Set a maximum sum to a minimum int value
+        // and find all possible sums in the array;
+        // whenever you find a sum larger than the maximum sum
+        // set the maximum sum to its value.
+        // 
         // "Big O" value: O(n^2)
         public int MaxSubarrayBigONSquared(int[] nums)
         {
@@ -34,6 +39,59 @@ namespace DataStructuresAndAlgorithms.Section6
                 }
             }
 
+            return maxSum;
+        }
+
+        // Explanation: Any subarray's sum is bigger with the
+        // maximum sum subarray (MSS) then without it.
+        // 
+        // So we first need to find the subarray that starts at the
+        // beginning of the input array (first index equal 0 
+        // of original array) and ends at the end of the MSS 
+        // (its last index is equal to MSS's last index);
+        // then find out at which index does the MSS begin.
+        //
+        // At that point the maximum sum is found.
+        // 
+        // "Big O" value: O(n)
+        public int MaxSubarrayBigON(int[] nums)
+        {
+            var len = nums.Length;
+
+            // If any of following two cases then
+            // there is no need for further processing
+            if (len == 0) return 0;
+            else if (len == 1) return nums[0];
+
+            int lastIndex = 0,
+                maxSum = nums[0],
+                currSum = nums[0];
+
+            // Find MSS's last index
+            for (var index = 1; index < len; index++)
+            {
+                currSum += nums[index];
+                if (currSum > maxSum)
+                {
+                    maxSum = currSum;
+                    lastIndex = index;
+                }
+            }
+
+            // Assign the current maximum sum
+            currSum = maxSum;
+
+            // Find the MSS's first index
+            for (var index = 0; index < lastIndex; index++)
+            {
+                currSum -= nums[index];
+                if (currSum > maxSum)
+                {
+                    maxSum = currSum;
+                }
+            }
+
+            // Return the maximum sum
             return maxSum;
         }
     }

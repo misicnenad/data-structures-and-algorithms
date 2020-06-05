@@ -6,7 +6,7 @@ namespace DataStructuresAndAlgorithms
     {
         static void Main(string[] args)
         {
-            var lesson = new Lesson71();
+            var lesson = new Lesson72MaximumSubarray();
             lesson.Run();
         }
     }
