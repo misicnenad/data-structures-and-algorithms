@@ -2,7 +2,7 @@
 
 namespace DataStructuresAndAlgorithms.Section3
 {
-    public class Lesson37
+    public class Lesson37ONSquared
     {
         public void Run()
         {

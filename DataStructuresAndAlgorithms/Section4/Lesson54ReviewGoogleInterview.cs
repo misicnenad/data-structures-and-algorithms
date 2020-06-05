@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace DataStructuresAndAlgorithms.Section4
 {
-    public class Lesson54
+    public class Lesson54ReviewGoogleInterview
     {
         public void Run()
         {

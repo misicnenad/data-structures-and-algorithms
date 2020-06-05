@@ -2,7 +2,7 @@
 
 namespace DataStructuresAndAlgorithms.Section3
 {
-    public class Lesson35
+    public class Lesson35BigORule2
     {
         public void Run()
         {

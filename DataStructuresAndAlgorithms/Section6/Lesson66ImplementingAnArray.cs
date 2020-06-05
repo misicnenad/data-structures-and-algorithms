@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace DataStructuresAndAlgorithms.Section6
 {
-    public class Lesson66
+    public class Lesson66ImplementingAnArray
     {
         public void Run()
         {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace DataStructuresAndAlgorithms.Section6
 {
-    public class Lesson71
+    public class Lesson71SolutionMergeSortedArrays
     {
         public void Run()
         {

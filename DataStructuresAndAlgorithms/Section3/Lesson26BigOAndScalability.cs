@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace DataStructuresAndAlgorithms.Section3
 {
-    public class Lesson26
+    public class Lesson26BigOAndScalability
     {
         public void Run()
         {

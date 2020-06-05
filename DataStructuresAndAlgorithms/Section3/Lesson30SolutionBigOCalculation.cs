@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace DataStructuresAndAlgorithms.Section3
 {
-    public class Lesson29ExerciseBigOCalculation
+    public class Lesson30SolutionBigOCalculation
     {
         public void Run()
         {

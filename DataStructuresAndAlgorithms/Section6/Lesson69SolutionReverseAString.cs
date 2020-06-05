@@ -4,7 +4,7 @@ using System.Globalization;
 
 namespace DataStructuresAndAlgorithms.Section6
 {
-    public class Lesson69
+    public class Lesson69SolutionReverseAString
     {
         public void Run()
         {

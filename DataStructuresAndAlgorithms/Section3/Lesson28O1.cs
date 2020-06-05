@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace DataStructuresAndAlgorithms.Section3
 {
-    public class Lesson28
+    public class Lesson28O1
     {
         public void Run()
         {

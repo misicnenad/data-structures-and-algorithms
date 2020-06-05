@@ -1,6 +1,6 @@
 ﻿namespace DataStructuresAndAlgorithms.Section3
 {
-    public class Lesson31ExerciseBigOCalculation2
+    public class Lesson32SolutionBigOCalculation2
     {
         public void Run()
         {
