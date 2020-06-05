@@ -59,6 +59,6 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 * Big thanks to [aneagoie](https://github.com/aneagoie/) for creating the Udemy course!
 * The course can be found [here](https://www.udemy.com/course/master-the-coding-interview-data-structures-algorithms/)
-* Hat tip to [PurpleBooth](https://gist.github.com/PurpleBooth) for the README.md and CONTRIBUTING.md templates
+* Hat tip to [PurpleBooth](https://gist.github.com/PurpleBooth) for awesome README.md and CONTRIBUTING.md templates
 
 
