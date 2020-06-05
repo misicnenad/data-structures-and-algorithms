@@ -1,6 +1,6 @@
 # Data Structures and Algorithms
 
-A C# implementation of the exercises found in the Udemy course ["Master the Coding Interview: Data Structures + Algorithms"](https://www.udemy.com/course/master-the-coding-interview-data-structures-algorithms/), created as a console app.
+A C# implementation of the exercises found in the Udemy course ["Master the Coding Interview: Data Structures + Algorithms"](https://www.udemy.com/course/master-the-coding-interview-data-structures-algorithms/), created as a console app
 
 ## Getting Started
 
@@ -15,7 +15,7 @@ Class name formats are:
 ### Prerequisites
 
 You will need the .NET Core version 3.1 (link to download [here](https://dotnet.microsoft.com/download)).
-.NET Core 2.2 is also supported, just set the `<TargetFramework>` tag in `DataStructuresAndAlgorithms.csproj` to:
+.NET Core 2.2 is also supported, just set the `<TargetFramework>` tag in *DataStructuresAndAlgorithms.csproj* to:
 
 ```
 <TargetFramework>netcoreapp2.2</TargetFramework>
@@ -25,7 +25,7 @@ You will need the .NET Core version 3.1 (link to download [here](https://dotnet.
 
 Simply clone the repository to your local machine and run the project. It's really that simple!
 
-To run a specific lesson example go to `Program.cs` and swap the lesson class to the desired one and run the application.
+To run a specific lesson example go to *Program.cs* and swap the lesson class to the desired one and run the application.
 
 Example for running *Lesson 76. - Hash Collisions*:
 ```
@@ -58,6 +58,6 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 ## Acknowledgments
 
 * Big thanks to [Andrei Neagoie](https://github.com/aneagoie/) for creating the course!
-* The course can be found ["here"](https://www.udemy.com/course/master-the-coding-interview-data-structures-algorithms/)
+* The course can be found [here](https://www.udemy.com/course/master-the-coding-interview-data-structures-algorithms/)
 
 
