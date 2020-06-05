@@ -1,6 +1,6 @@
 # Data Structures and Algorithms
 
-A C# console app implementation of the exercises found in the Udemy course ["Master the Coding Interview: Data Structures + Algorithms"](https://www.udemy.com/course/master-the-coding-interview-data-structures-algorithms/), created by Andrei Neagoie.
+A C# console app implementation of the exercises found in the Udemy course ["Master the Coding Interview: Data Structures + Algorithms"](https://www.udemy.com/course/master-the-coding-interview-data-structures-algorithms/), created by Andrei Neagoie
 
 ## Getting Started
 
