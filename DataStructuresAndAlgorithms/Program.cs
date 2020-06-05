@@ -1,4 +1,5 @@
-﻿using DataStructuresAndAlgorithms.Section6; 
+﻿using DataStructuresAndAlgorithms.Section6;
+using DataStructuresAndAlgorithms.Section7;
 
 namespace DataStructuresAndAlgorithms
 {
@@ -6,7 +7,7 @@ namespace DataStructuresAndAlgorithms
     {
         static void Main(string[] args)
         {
-            var lesson = new Lesson72MaximumSubarray();
+            var lesson = new Lesson76HashCollisions();
             lesson.Run();
         }
     }
