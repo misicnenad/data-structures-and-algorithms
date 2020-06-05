@@ -10,7 +10,7 @@ namespace DataStructuresAndAlgorithms.Section3
             var array = new string[] { "hi", "my", "teddy" };
 
             Console.WriteLine(array[0]); // O(1)
-            Console.WriteLine(array[^1]); // O(1)
+            Console.WriteLine(array[array.Length - 1]); // O(1)
 
             // Comparing dates would have the "Big O" value: O(n^2) 
             // Might need to change the data structure

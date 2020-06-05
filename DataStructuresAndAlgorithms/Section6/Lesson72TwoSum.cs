@@ -8,7 +8,8 @@ namespace DataStructuresAndAlgorithms.Section6
 
         public void Run(int[] nums = null, int target = 9)
         {
-            nums ??= _defaultNums;
+            nums = nums ?? _defaultNums;
+
             var result = TwoSum(nums, target);
             Console.WriteLine(string.Join(", ", result));
         }

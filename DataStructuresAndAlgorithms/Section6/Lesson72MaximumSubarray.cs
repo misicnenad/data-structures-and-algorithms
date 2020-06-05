@@ -8,7 +8,7 @@ namespace DataStructuresAndAlgorithms.Section6
 
         public void Run(int[] array = null)
         {
-            array ??= _defaultArray;
+            array = array ?? _defaultArray;
 
             var result = MaxSubarrayBigON(array);
 
