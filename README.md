@@ -1,6 +1,6 @@
 # Data Structures and Algorithms
 
-A C# implementation of the exercises found in the Udemy course ["Master the Coding Interview: Data Structures + Algorithms"](https://www.udemy.com/course/master-the-coding-interview-data-structures-algorithms/), created as a console app
+A C# console app implementation of the exercises found in the Udemy course ["Master the Coding Interview: Data Structures + Algorithms"](https://www.udemy.com/course/master-the-coding-interview-data-structures-algorithms/), created by Andrei Neagoie.
 
 ## Getting Started
 
@@ -57,7 +57,8 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Big thanks to [Andrei Neagoie](https://github.com/aneagoie/) for creating the course!
+* Big thanks to [aneagoie](https://github.com/aneagoie/) for creating the Udemy course!
 * The course can be found [here](https://www.udemy.com/course/master-the-coding-interview-data-structures-algorithms/)
+* Hat tip to [PurpleBooth](https://gist.github.com/PurpleBooth) for the README.md and CONTRIBUTING.md templates
 
 
