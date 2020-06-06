@@ -7,7 +7,7 @@ namespace DataStructuresAndAlgorithms
     {
         static void Main(string[] args)
         {
-            var lesson = new Lesson76HashCollisions();
+            var lesson = new Lesson80Keys();
             lesson.Run();
         }
     }
