@@ -17,7 +17,7 @@ Class name formats are:
 You will need the .NET Core version 3.1 (link to download [here](https://dotnet.microsoft.com/download)).
 .NET Core 2.2 is also supported, just set the `<TargetFramework>` tag in *DataStructuresAndAlgorithms.csproj* to:
 
-```
+```wsdl
 <TargetFramework>netcoreapp2.2</TargetFramework>
 ```
 
@@ -28,7 +28,7 @@ Simply clone the repository to your local machine and run the project. It's real
 To run a specific lesson example go to *Program.cs* and swap the lesson class to the desired one and run the application.
 
 Example for running *Lesson 76. - Hash Collisions*:
-```
+```csharp
 static void Main(string[] args)
 {
     var lesson = new Lesson76HashCollisions();
