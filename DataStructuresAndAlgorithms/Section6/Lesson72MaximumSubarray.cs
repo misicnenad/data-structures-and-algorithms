@@ -21,7 +21,7 @@ namespace DataStructuresAndAlgorithms.Section6
         // set the maximum sum to its value.
         // 
         // "Big O" value: O(n^2)
-        public int MaxSubarrayBigONSquared(int[] nums)
+        private static int MaxSubarrayBigONSquared(int[] nums)
         {
             var maxSum = int.MinValue;
 
@@ -54,7 +54,7 @@ namespace DataStructuresAndAlgorithms.Section6
         // At that point the maximum sum is found.
         // 
         // "Big O" value: O(n)
-        public int MaxSubarrayBigON(int[] nums)
+        private static int MaxSubarrayBigON(int[] nums)
         {
             var len = nums.Length;
 
@@ -94,5 +94,22 @@ namespace DataStructuresAndAlgorithms.Section6
             // Return the maximum sum
             return maxSum;
         }
+
+
+        private static int MaxSubarrayBigONOptimized(int[] nums)
+        {
+            int maxSum = nums[0];
+            int currSum = nums[0];
+            var len = nums.Length;
+
+            for (int i = 1; i < len; i++)
+            {
+                currSum = Math.Max(nums[i], currSum + nums[i]);
+                maxSum = Math.Max(maxSum, currSum);
+            }
+
+            return maxSum;
+        }
+
     }
 }
