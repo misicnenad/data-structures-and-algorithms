@@ -7,7 +7,7 @@ namespace DataStructuresAndAlgorithms
     {
         static void Main(string[] args)
         {
-            var lesson = new Lesson80Keys();
+            var lesson = new Lesson84SolutionFirstRecurringCharacter();
             lesson.Run();
         }
     }
