@@ -15,7 +15,7 @@ namespace DataStructuresAndAlgorithms.Section3
         }
 
         // Space complexity value: O(1)
-        private void Booooo(int[] n)
+        private static void Booooo(int[] n)
         {
             for (var i= 0; i < n.Length; i++)
             {
@@ -24,7 +24,7 @@ namespace DataStructuresAndAlgorithms.Section3
         }
 
         // Space complexity value: O(n)
-        private string[] ArrayOfHiNTimes(int n)
+        private static string[] ArrayOfHiNTimes(int n)
         {
             var hiArray = new string[n];
 

@@ -26,7 +26,7 @@ namespace DataStructuresAndAlgorithms.Section6
         private class MyArray
         {
             private int _length = 0;
-            private IList<object> _data = new List<object>();
+            private readonly IList<object> _data = new List<object>();
 
             public object this[int index]
             {

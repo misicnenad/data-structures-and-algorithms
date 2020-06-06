@@ -15,7 +15,7 @@ namespace DataStructuresAndAlgorithms.Section3
         }
 
         // "Big O" value: O(n) --> Linear Time
-        private void FindNemo(string[] array)
+        private static void FindNemo(string[] array)
         {
             // Time elapsed is unimportant for the purposes of Big O notation
 

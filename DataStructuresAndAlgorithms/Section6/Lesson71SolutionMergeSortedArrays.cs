@@ -14,7 +14,7 @@ namespace DataStructuresAndAlgorithms.Section6
             Console.WriteLine(string.Join(" ", result));
         }
 
-        private int[] MergeSortedArrays(int[] array1, int[] array2)
+        private static int[] MergeSortedArrays(int[] array1, int[] array2)
         {
             var mergedLength = array1.Length + array2.Length;
             var mergedArray = new List<int>(mergedLength);

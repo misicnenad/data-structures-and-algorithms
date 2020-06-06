@@ -15,7 +15,7 @@ namespace DataStructuresAndAlgorithms.Section3
             FindNemo(large);
         }
 
-        private void FindNemo(string[] array)
+        private static void FindNemo(string[] array)
         {
             var timer = new Stopwatch();
             timer.Start();

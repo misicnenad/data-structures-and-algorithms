@@ -12,7 +12,7 @@ namespace DataStructuresAndAlgorithms.Section3
         }
 
         // "Big O" value: O(1 + n/2 + 100) = O(n/2 + 101) = O(n/2 + 1) = O(n + 1) = O(n) --> Remove Contants
-        private void PrintFirstItemThenFirstHalfThenSayHi100Times(string[] items)
+        private static void PrintFirstItemThenFirstHalfThenSayHi100Times(string[] items)
         {
             Console.WriteLine(items[0]); // O(1)
 
@@ -32,7 +32,7 @@ namespace DataStructuresAndAlgorithms.Section3
         }
 
         // "Big O" value: O(2n) = O(n)
-        private void CompressBoxexTwice(string[] boxes)
+        private static void CompressBoxexTwice(string[] boxes)
         {
             foreach (var box in boxes)
             {

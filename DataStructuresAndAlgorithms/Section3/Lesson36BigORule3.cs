@@ -13,7 +13,7 @@ namespace DataStructuresAndAlgorithms.Section3
         }
 
         // "Big O" value: O(boxes1 + boxes2) --> Different Terms For Inputs
-        private void CompressBoxexTwice(string[] boxes1, string[] boxes2)
+        private static void CompressBoxexTwice(string[] boxes1, string[] boxes2)
         {
             foreach (var box in boxes1)
             {

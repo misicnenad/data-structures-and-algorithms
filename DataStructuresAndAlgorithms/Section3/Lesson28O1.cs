@@ -12,7 +12,7 @@ namespace DataStructuresAndAlgorithms.Section3
             LogFirstTwoBoxes(boxes);
         }
 
-        private void LogFirstTwoBoxes(int[] boxes)
+        private static void LogFirstTwoBoxes(int[] boxes)
         {
             Console.WriteLine(boxes[0]); // O(1)
             Console.WriteLine(boxes[1]); // O(1)

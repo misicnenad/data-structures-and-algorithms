@@ -17,7 +17,7 @@ namespace DataStructuresAndAlgorithms.Section4
 
         // "Big O" value: O(a*b)
         // Space complexity value: O(1)
-        private bool ContainsCommonItem(object[] arr1, object[] arr2)
+        private static bool ContainsCommonItem(object[] arr1, object[] arr2)
         {
             for (var i = 0; i < arr1.Length; i++)
             {
@@ -35,7 +35,7 @@ namespace DataStructuresAndAlgorithms.Section4
 
         // "Big O" value: O(a + b)
         // Space complexity value: O(a)
-        private bool ContainsCommonItem2(object[] arr1, object[] arr2)
+        private static bool ContainsCommonItem2(object[] arr1, object[] arr2)
         {
             // loop through first array and 
             // create dictionary where keys == items in 
@@ -62,13 +62,13 @@ namespace DataStructuresAndAlgorithms.Section4
             return false;
         }
 
-        private bool ContainsCommonItem3(object[] arr1, object[] arr2)
+        private static bool ContainsCommonItem3(object[] arr1, object[] arr2)
         {
             return arr1.Any(item => arr2.Contains(item));
         }
 
         // C# way of doing intersection
-        private bool ContainsCommonItem4(object[] arr1, object[] arr2)
+        private static bool ContainsCommonItem4(object[] arr1, object[] arr2)
         {
             //return arr1.Intersect(arr2).Any();
             return arr1.Join(arr2, o => o, i => i, (o, i) => o).Any(); // More performant

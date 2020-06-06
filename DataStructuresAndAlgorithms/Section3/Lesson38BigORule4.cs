@@ -13,7 +13,7 @@ namespace DataStructuresAndAlgorithms.Section3
 
         // "Big O" value: O(n + n^2) = O(n^2) --> Drop Non Dominants
         // Another example: O(x^2 + 3x + 100 + x/2) = O(x^2)
-        private void PrintAllNumbersThenAllPairSums(int[] numbers)
+        private static void PrintAllNumbersThenAllPairSums(int[] numbers)
         {
             Console.WriteLine("these are the numbers:");
             foreach (var number in numbers) // O(n)

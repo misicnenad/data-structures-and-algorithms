@@ -15,7 +15,7 @@ namespace DataStructuresAndAlgorithms.Section6
         // Create a function that reverses a string:
         // 'Hi My name is Andrei!' should be:
         // 'ierdnA si eman yM iH'
-        private string Reverse(string str)
+        private static string Reverse(string str)
         {
             if (string.IsNullOrEmpty(str) || str.Length < 2)
             {
@@ -42,7 +42,7 @@ namespace DataStructuresAndAlgorithms.Section6
             return new string(charArray);
         }
 
-        private string ReverseCSharpWayMoreEfficient(string str)
+        private static string ReverseCSharpWayMoreEfficient(string str)
         {
             return string.Create(str.Length, str, (chars, state) =>
             {
@@ -57,7 +57,7 @@ namespace DataStructuresAndAlgorithms.Section6
             });
         }
 
-        private string ReverseCSharpWayMostEfficient(string str)
+        private static string ReverseCSharpWayMostEfficient(string str)
         {
             return string.Create(str.Length, str, (chars, state) =>
             {

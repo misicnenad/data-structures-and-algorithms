@@ -12,7 +12,7 @@ namespace DataStructuresAndAlgorithms.Section3
         }
 
         // "Big O" value: O(n * n) = O(n^2) --> Quadratic Time
-        private void LogAllPairsOfArray(string[] array)
+        private static void LogAllPairsOfArray(string[] array)
         {
             for (var i= 0; i < array.Length; i++)
             {

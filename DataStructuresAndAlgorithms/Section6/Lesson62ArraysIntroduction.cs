@@ -12,7 +12,7 @@ namespace DataStructuresAndAlgorithms.Section6
         }
 
         // In .NET Lists and IEnumerables are used more often than arrays
-        private void ShowcaseLists()
+        private static void ShowcaseLists()
         {
             // Lists are internally represented as dynamic arrays
             var strings = new List<string> { "a", "b", "c", "d" };
@@ -36,7 +36,7 @@ namespace DataStructuresAndAlgorithms.Section6
             Console.WriteLine(string.Join(" ", strings));
         }
 
-        private void ShowcaseArrays()
+        private static void ShowcaseArrays()
         {
             var strings = new string[] { "a", "b", "c", "d" };
             // 4x2 = 8 bytes of storage in .NET

@@ -13,7 +13,7 @@ namespace DataStructuresAndAlgorithms.Section3
         }
 
         // "Big O" value: O(3 + 4n) = O(n)
-        private int FunChallenge(object[] input)
+        private static int FunChallenge(object[] input)
         {
             var a = 10; // O(1)
             a = 50 + 3; // O(1)
@@ -28,7 +28,7 @@ namespace DataStructuresAndAlgorithms.Section3
             return a; // O(1)
         }
 
-        private void AnotherFunction()
+        private static void AnotherFunction()
         {
             Console.WriteLine("Another Function");
         }

@@ -4,9 +4,9 @@ namespace DataStructuresAndAlgorithms.Section6
 {
     public class Lesson72MaximumSubarray
     {
-        private readonly int[] _defaultArray = new int[] { -2, 1, -3, 4, -1, 2, 1, -5, 4 };
+        private static readonly int[] _defaultArray = new int[] { -2, 1, -3, 4, -1, 2, 1, -5, 4 };
 
-        public void Run(int[] array = null)
+        public static void Run(int[] array = null)
         {
             array = array ?? _defaultArray;
 
@@ -101,7 +101,6 @@ namespace DataStructuresAndAlgorithms.Section6
             int maxSum = nums[0];
             int currSum = nums[0];
             var len = nums.Length;
-
             for (int i = 1; i < len; i++)
             {
                 currSum = Math.Max(nums[i], currSum + nums[i]);

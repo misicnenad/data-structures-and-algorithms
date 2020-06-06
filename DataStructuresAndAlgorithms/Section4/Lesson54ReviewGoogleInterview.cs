@@ -16,7 +16,7 @@ namespace DataStructuresAndAlgorithms.Section4
         }
 
         // Naive 
-        private bool HasPairWithSum(int[] arr, int sum)
+        private static bool HasPairWithSum(int[] arr, int sum)
         {
             var len = arr.Length;
             for (var i = 0; i < len-1; i++)
@@ -34,7 +34,7 @@ namespace DataStructuresAndAlgorithms.Section4
         }
 
         // Better
-        private bool HasPairWithSum2(int[] arr, int sum)
+        private static bool HasPairWithSum2(int[] arr, int sum)
         {
             var mySet = new HashSet<int>();
             var len = arr.Length;
