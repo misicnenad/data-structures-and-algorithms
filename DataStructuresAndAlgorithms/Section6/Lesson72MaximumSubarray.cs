@@ -6,7 +6,7 @@ namespace DataStructuresAndAlgorithms.Section6
     {
         private static readonly int[] _defaultArray = new int[] { -2, 1, -3, 4, -1, 2, 1, -5, 4 };
 
-        public static void Run(int[] array = null)
+        public void Run(int[] array = null)
         {
             array = array ?? _defaultArray;
 
