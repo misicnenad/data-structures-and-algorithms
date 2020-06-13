@@ -14,48 +14,8 @@ namespace DataStructuresAndAlgorithms.Section8
             var linkedList = new LinkedList(array);
 
             Console.WriteLine(linkedList);
-            ReverseRecursive(linkedList);
+            linkedList.Reverse();
             Console.WriteLine(linkedList);
-        }
-
-        private static void Reverse(LinkedList linkedList)
-        {
-            _ = linkedList ?? throw new ArgumentNullException(nameof(linkedList));
-
-            linkedList.Tail = linkedList.Head;
-            Node previous = null;
-            var current = linkedList.Head;
-            var next = current?.Next;
-
-            while (current != null)
-            {
-                current.Next = previous;
-                previous = current;
-                current = next;
-                next = next?.Next;
-            }
-
-            linkedList.Head = previous;
-        }
-
-        private static void ReverseRecursive(LinkedList linkedList)
-        {
-            ReverseInner(null, linkedList.Head, linkedList);
-        }
-
-        private static void ReverseInner(Node previous, Node current, LinkedList linkedList)
-        {
-            if (current.Next == null)
-            {
-                linkedList.Head = current;
-            }
-            else
-            {
-                ReverseInner(current, current.Next, linkedList);
-            }
-
-            linkedList.Tail = current;
-            current.Next = previous;
         }
     }
 
@@ -101,6 +61,49 @@ namespace DataStructuresAndAlgorithms.Section8
             }
 
             return sb.ToString();
+        }
+
+        public void Reverse()
+        {
+            if (Head?.Next == null)
+            {
+                return;
+            }
+
+            Tail = Head;
+            
+            Node previous = null;
+            var current = Head;
+
+            while (current != null)
+            {
+                var next = current?.Next;
+                current.Next = previous;
+                previous = current;
+                current = next;
+            }
+
+            Head = previous;
+        }
+
+        public void ReverseRecursive()
+        {
+            ReverseInner(null, Head);
+        }
+
+        private void ReverseInner(Node previous, Node current)
+        {
+            if (current.Next == null)
+            {
+                Head = current;
+            }
+            else
+            {
+                ReverseInner(current, current.Next);
+            }
+
+            Tail = current;
+            current.Next = previous;
         }
     }
 
