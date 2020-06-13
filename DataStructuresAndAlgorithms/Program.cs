@@ -1,5 +1,6 @@
 ﻿using DataStructuresAndAlgorithms.Section6;
 using DataStructuresAndAlgorithms.Section7;
+using DataStructuresAndAlgorithms.Section8;
 
 namespace DataStructuresAndAlgorithms
 {
@@ -7,7 +8,7 @@ namespace DataStructuresAndAlgorithms
     {
         static void Main(string[] args)
         {
-            var lesson = new Lesson84SolutionFirstRecurringCharacter();
+            var lesson = new Lesson105SolutionReverse();
             lesson.Run();
         }
     }
