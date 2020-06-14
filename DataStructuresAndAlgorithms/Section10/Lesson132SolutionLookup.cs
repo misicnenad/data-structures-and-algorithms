@@ -2,7 +2,7 @@
 
 namespace DataStructuresAndAlgorithms.Section10
 {
-    public class Lesson133SolutionRemove
+    public class Lesson132SolutionLookup
     {
         public void Run()
         {
@@ -15,7 +15,10 @@ namespace DataStructuresAndAlgorithms.Section10
             tree.Insert(15);
             tree.Insert(1);
 
-            Console.WriteLine(tree);
+            Console.WriteLine(tree.Lookup(9));
+            Console.WriteLine(tree.Lookup(90));
+            Console.WriteLine(tree.Lookup(20));
+            Console.WriteLine(tree.Lookup(170));
         }
 
         private class BinarrySearchTree
@@ -38,61 +41,58 @@ namespace DataStructuresAndAlgorithms.Section10
                 }
                 else
                 {
-                    return InsertPatternMatchingInternal(value, newNode);
+                    var currentNode = Root;
+                    while (true)
+                    {
+                        if (value < currentNode.Value)
+                        {
+                            if (currentNode.Left == null)
+                            {
+                                currentNode.Left = newNode;
+                                return this;
+                            }
+
+                            currentNode = currentNode.Left;
+                        }
+                        else
+                        {
+                            if (currentNode.Right == null)
+                            {
+                                currentNode.Right = newNode;
+                                return this;
+                            }
+
+                            currentNode = currentNode.Right;
+                        }
+                    }
                 }
             }
 
-            private BinarrySearchTree InsertInternal(int value, Node newNode)
+            public object Lookup(int value)
             {
+                // This part is unnecessary since the while loop would automatically exit
+                // but is here to be the same as in the lesson video
+                if (Root == null)
+                {
+                    return false;
+                }
                 var currentNode = Root;
-                while (true)
+                while (currentNode != null)
                 {
                     if (value < currentNode.Value)
                     {
-                        if (currentNode.Left == null)
-                        {
-                            currentNode.Left = newNode;
-                            return this;
-                        }
-
                         currentNode = currentNode.Left;
+                    }
+                    else if (value > currentNode.Value)
+                    {
+                        currentNode = currentNode.Right;
                     }
                     else
                     {
-                        if (currentNode.Right == null)
-                        {
-                            currentNode.Right = newNode;
-                            return this;
-                        }
-
-                        currentNode = currentNode.Right;
+                        return currentNode;
                     }
                 }
-            }
-
-            private BinarrySearchTree InsertPatternMatchingInternal(int value, Node newNode)
-            {
-                var currentNode = Root;
-                while (true)
-                {
-                    switch (value < currentNode.Value, currentNode.Left, currentNode.Right)
-                    {
-                        case (true, null, _):
-                            currentNode.Left = newNode;
-                            return this;
-                        case (true, _, _):
-                            currentNode = currentNode.Left;
-                            break;
-                        case (_, _, null):
-                            currentNode.Right = newNode;
-                            return this;
-                        case (_, _, _):
-                            currentNode = currentNode.Right;
-                            break;
-                        default:
-                            throw new NotImplementedException($"({value < currentNode.Value}, {currentNode.Left}, {currentNode.Right})");
-                    }
-                }
+                return false;
             }
         }
 
