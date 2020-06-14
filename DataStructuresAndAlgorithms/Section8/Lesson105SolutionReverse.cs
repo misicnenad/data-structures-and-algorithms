@@ -63,15 +63,15 @@ namespace DataStructuresAndAlgorithms.Section8
             return sb.ToString();
         }
 
-        public void Reverse()
+        public LinkedList Reverse()
         {
             if (Head?.Next == null)
             {
-                return;
+                return this;
             }
 
             Tail = Head;
-            
+
             Node previous = null;
             var current = Head;
 
@@ -84,14 +84,16 @@ namespace DataStructuresAndAlgorithms.Section8
             }
 
             Head = previous;
+            
+            return this;
         }
 
         public void ReverseRecursive()
         {
-            ReverseInner(null, Head);
+            ReverseInternal(null, Head);
         }
 
-        private void ReverseInner(Node previous, Node current)
+        private void ReverseInternal(Node previous, Node current)
         {
             if (current.Next == null)
             {
@@ -99,7 +101,7 @@ namespace DataStructuresAndAlgorithms.Section8
             }
             else
             {
-                ReverseInner(current, current.Next);
+                ReverseInternal(current, current.Next);
             }
 
             Tail = current;
