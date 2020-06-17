@@ -2,6 +2,16 @@
 
 A C# console app implementation of the exercises found in the Udemy course ["Master the Coding Interview: Data Structures + Algorithms"](https://www.udemy.com/course/master-the-coding-interview-data-structures-algorithms/), created by Andrei Neagoie
 
+## Summary
+
+  - [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installing](#installing)
+  - [Contributing](#contributing)
+  - [Authors](#authors)
+  - [License](#license)
+  - [Acknowledgments](#acknowledgments)
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
