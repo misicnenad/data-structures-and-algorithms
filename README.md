@@ -14,11 +14,14 @@ Class name formats are:
 
 ### Prerequisites
 
-You will need the .NET Core version 3.1 (link to download [here](https://dotnet.microsoft.com/download)).
-.NET Core 2.2 is also supported, just set the `<TargetFramework>` tag in *DataStructuresAndAlgorithms.csproj* to:
+This project is compatible with .NET Standard 2.0 (compatible packages [here](https://docs.microsoft.com/en-us/dotnet/standard/net-standard#net-implementation-support). To download the .NET SDK's visit [this page](https://dotnet.microsoft.com/download).
+By default the project is configured to target .NET Core 2.1.
+To change the targeted framework, just set the `<TargetFramework>` tag in *DataStructuresAndAlgorithms.csproj* to appropriate value.
+
+E.G. to target the .NET Framework 4.7.1 input:
 
 ```wsdl
-<TargetFramework>netcoreapp2.2</TargetFramework>
+<TargetFramework>net471</TargetFramework>
 ```
 
 ### Installing
