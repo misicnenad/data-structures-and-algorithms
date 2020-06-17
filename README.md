@@ -2,6 +2,16 @@
 
 A C# console app implementation of the exercises found in the Udemy course ["Master the Coding Interview: Data Structures + Algorithms"](https://www.udemy.com/course/master-the-coding-interview-data-structures-algorithms/), created by Andrei Neagoie
 
+## Summary
+
+  - [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installing](#installing)
+  - [Contributing](#contributing)
+  - [Authors](#authors)
+  - [License](#license)
+  - [Acknowledgments](#acknowledgments)
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
@@ -14,11 +24,14 @@ Class name formats are:
 
 ### Prerequisites
 
-You will need the .NET Core version 3.1 (link to download [here](https://dotnet.microsoft.com/download)).
-.NET Core 2.2 is also supported, just set the `<TargetFramework>` tag in *DataStructuresAndAlgorithms.csproj* to:
+This project is compatible with .NET Standard 2.0 (compatible packages [here](https://docs.microsoft.com/en-us/dotnet/standard/net-standard#net-implementation-support). To download the .NET SDK's visit [this page](https://dotnet.microsoft.com/download). By default the project is configured to target .NET Core 2.1.
+
+To change the targeted framework, just set the `<TargetFramework>` tag in *DataStructuresAndAlgorithms.csproj* to appropriate value.
+
+E.G. to target the .NET Framework 4.7.1 change the tag value to:
 
 ```wsdl
-<TargetFramework>netcoreapp2.2</TargetFramework>
+<TargetFramework>net471</TargetFramework>
 ```
 
 ### Installing
@@ -49,7 +62,7 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduc
 
 ## Authors
 
-* **Nenad Misic** - *Initial work* - [shonmisic](https://github.com/shonmisic)
+* **Nenad Misic** - *Initial work* - [misicnenad](https://github.com/misicnenad)
 
 ## License
 
@@ -59,6 +72,6 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 * Big thanks to [aneagoie](https://github.com/aneagoie/) for creating the Udemy course!
 * The course can be found [here](https://www.udemy.com/course/master-the-coding-interview-data-structures-algorithms/)
-* Hat tip to [PurpleBooth](https://gist.github.com/PurpleBooth) for awesome README.md and CONTRIBUTING.md templates
+* Hat tip to [PurpleBooth](https://gist.github.com/PurpleBooth) for awesome [README.md](https://github.com/PurpleBooth/a-good-readme-template) and [CONTRIBUTING.md](https://github.com/PurpleBooth/a-good-readme-template/blob/main/CONTRIBUTING.md) templates
 
 
