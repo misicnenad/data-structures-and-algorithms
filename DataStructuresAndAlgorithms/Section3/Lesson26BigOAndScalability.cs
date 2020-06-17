@@ -2,9 +2,9 @@
 using System.Diagnostics;
 using System.Linq;
 
-namespace DataStructuresAndAlgorithms.Section3
+namespace DataStructuresAndAlgorithms.Lessons.Section3
 {
-    public class Lesson26BigOAndScalability
+    public class Lesson26BigOAndScalability : IBaseLesson
     {
         public void Run()
         {

@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace DataStructuresAndAlgorithms.Section12
+namespace DataStructuresAndAlgorithms.Lessons.Section12
 {
-    public class Lesson155SolutionFactorial
+    public class Lesson155SolutionFactorial : IBaseLesson
     {
         public void Run(int number = 5)
         {

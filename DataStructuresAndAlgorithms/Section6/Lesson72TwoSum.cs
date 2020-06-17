@@ -2,9 +2,9 @@
 
 using Collections.Extensions.ToPyString;
 
-namespace DataStructuresAndAlgorithms.Section6
+namespace DataStructuresAndAlgorithms.Lessons.Section6
 {
-    public class Lesson72TwoSum
+    public class Lesson72TwoSum : IBaseLesson
     {
         private static readonly int[] _defaultNums = new int[] { 2, 7, 11, 15 };
 

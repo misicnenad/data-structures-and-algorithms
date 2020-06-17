@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 using Collections.Extensions.ToPyString;
 
-namespace DataStructuresAndAlgorithms.Section7
+namespace DataStructuresAndAlgorithms.Lessons.Section7
 {
-    public class Lesson84SolutionFirstRecurringCharacter
+    public class Lesson84SolutionFirstRecurringCharacter : IBaseLesson
     {
         private static readonly int[] _defaultArray = new int[] { 2, 5, 1, 2, 3, 5, 1, 2, 4 };
 

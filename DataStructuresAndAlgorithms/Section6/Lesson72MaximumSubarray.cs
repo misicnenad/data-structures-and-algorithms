@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace DataStructuresAndAlgorithms.Section6
+namespace DataStructuresAndAlgorithms.Lessons.Section6
 {
-    public class Lesson72MaximumSubarray
+    public class Lesson72MaximumSubarray : IBaseLesson
     {
         private static readonly int[] _defaultArray = new int[] { -2, 1, -3, 4, -1, 2, 1, -5, 4 };
 

@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace DataStructuresAndAlgorithms.Section3
+namespace DataStructuresAndAlgorithms.Lessons.Section3
 {
-    public class Lesson45ExerciseTwitter
+    public class Lesson45ExerciseTwitter : IBaseLesson
     {
         // Find 1st, Find Nth..
         public void Run()

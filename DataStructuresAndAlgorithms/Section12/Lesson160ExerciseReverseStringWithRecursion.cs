@@ -1,13 +1,17 @@
 ﻿using System;
 
-namespace DataStructuresAndAlgorithms.Section12
+namespace DataStructuresAndAlgorithms.Lessons.Section12
 {
-    public class Lesson160ExerciseReverseStringWithRecursion
+    public class Lesson160ExerciseReverseStringWithRecursion : IBaseLesson
     {
-        public void Run(string str = "yoyo master")
+        public void Run()
         {
-            var result = ReverseStringRecursive(str);
-            Console.WriteLine(result);
+            Console.Write("Input string to reverse: ");
+            var str = Console.ReadLine();
+            Console.WriteLine("Original string: " + str);
+
+            var reversed = ReverseStringRecursive(str);
+            Console.WriteLine("Reversed string: " + reversed);
         }
 
         private string ReverseStringRecursive(string str)

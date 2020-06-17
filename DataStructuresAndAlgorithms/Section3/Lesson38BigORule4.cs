@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace DataStructuresAndAlgorithms.Section3
+namespace DataStructuresAndAlgorithms.Lessons.Section3
 {
-    public class Lesson38BigORule4
+    public class Lesson38BigORule4 : IBaseLesson
     {
         public void Run()
         {

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 using Collections.Extensions.ToPyString;
 
-namespace DataStructuresAndAlgorithms.Section6
+namespace DataStructuresAndAlgorithms.Lessons.Section6
 {
-    public class Lesson71SolutionMergeSortedArrays
+    public class Lesson71SolutionMergeSortedArrays : IBaseLesson
     {
         public void Run()
         {

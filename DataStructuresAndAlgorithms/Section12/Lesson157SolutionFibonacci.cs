@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace DataStructuresAndAlgorithms.Section12
+namespace DataStructuresAndAlgorithms.Lessons.Section12
 {
-    public class Lesson157SolutionFibonacci
+    public class Lesson157SolutionFibonacci : IBaseLesson
     {
         public void Run(int number = 7)
         {

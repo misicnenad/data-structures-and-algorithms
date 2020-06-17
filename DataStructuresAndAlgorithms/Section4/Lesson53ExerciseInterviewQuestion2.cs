@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace DataStructuresAndAlgorithms.Section4
+namespace DataStructuresAndAlgorithms.Lessons.Section4
 {
-    public class Lesson53ExerciseInterviewQuestion2
+    public class Lesson53ExerciseInterviewQuestion2 : IBaseLesson
     {
         public void Run()
         {

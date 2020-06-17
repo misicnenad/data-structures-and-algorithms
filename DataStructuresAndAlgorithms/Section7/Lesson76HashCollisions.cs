@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace DataStructuresAndAlgorithms.Section7
+namespace DataStructuresAndAlgorithms.Lessons.Section7
 {
-    public class Lesson76HashCollisions
+    public class Lesson76HashCollisions : IBaseLesson
     {
         public void Run()
         {

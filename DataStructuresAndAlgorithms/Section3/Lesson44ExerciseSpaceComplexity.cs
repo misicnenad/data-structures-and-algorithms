@@ -2,9 +2,9 @@
 
 using Collections.Extensions.ToPyString;
 
-namespace DataStructuresAndAlgorithms.Section3
+namespace DataStructuresAndAlgorithms.Lessons.Section3
 {
-    public class Lesson44ExerciseSpaceComplexity
+    public class Lesson44ExerciseSpaceComplexity : IBaseLesson
     {
         public void Run()
         {

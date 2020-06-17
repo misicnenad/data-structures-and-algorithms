@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Linq;
 
-namespace DataStructuresAndAlgorithms.Section3
+namespace DataStructuresAndAlgorithms.Lessons.Section3
 {
-    public class Lesson30SolutionBigOCalculation
+    public class Lesson30SolutionBigOCalculation : IBaseLesson
     {
         public void Run()
         {

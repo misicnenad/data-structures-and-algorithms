@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Globalization;
 
-namespace DataStructuresAndAlgorithms.Section6
+namespace DataStructuresAndAlgorithms.Lessons.Section6
 {
-    public class Lesson69SolutionReverseAString
+    public class Lesson69SolutionReverseAString : IBaseLesson
     {
         public void Run()
         {

@@ -4,9 +4,9 @@ using System.Linq;
 
 using Collections.Extensions.ToPyString;
 
-namespace DataStructuresAndAlgorithms.Section6
+namespace DataStructuresAndAlgorithms.Lessons.Section6
 {
-    public class Lesson66ImplementingAnArray
+    public class Lesson66ImplementingAnArray : IBaseLesson
     {
         public void Run()
         {

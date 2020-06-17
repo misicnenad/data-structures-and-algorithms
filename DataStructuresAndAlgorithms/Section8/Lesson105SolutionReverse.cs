@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Text;
 
-namespace DataStructuresAndAlgorithms.Section8
+namespace DataStructuresAndAlgorithms.Lessons.Section8
 {
-    public class Lesson105SolutionReverse
+    public class Lesson105SolutionReverse : IBaseLesson
     {
         private static readonly object[] _defaultArray = new object[] { 2, 5, 1, 3, 4 };
 

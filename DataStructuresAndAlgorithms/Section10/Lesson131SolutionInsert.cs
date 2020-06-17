@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace DataStructuresAndAlgorithms.Section10
+namespace DataStructuresAndAlgorithms.Lessons.Section10
 {
-    public class Lesson131SolutionInsert
+    public class Lesson131SolutionInsert : IBaseLesson
     {
         public void Run()
         {

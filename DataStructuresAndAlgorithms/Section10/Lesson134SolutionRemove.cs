@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DataStructuresAndAlgorithms.Section10
+namespace DataStructuresAndAlgorithms.Lessons.Section10
 {
-    public class Lesson134SolutionRemove
+    public class Lesson134SolutionRemove : IBaseLesson
     {
         public void Run()
         {

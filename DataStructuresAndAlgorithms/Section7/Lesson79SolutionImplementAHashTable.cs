@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace DataStructuresAndAlgorithms.Section7
+namespace DataStructuresAndAlgorithms.Lessons.Section7
 {
-    public class Lesson79SolutionImplementAHashTable
+    public class Lesson79SolutionImplementAHashTable : IBaseLesson
     {
         public void Run()
         {

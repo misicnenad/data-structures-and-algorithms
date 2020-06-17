@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace DataStructuresAndAlgorithms.Section4
+namespace DataStructuresAndAlgorithms.Lessons.Section4
 {
-    public class Lesson54ReviewGoogleInterview
+    public class Lesson54ReviewGoogleInterview : IBaseLesson
     {
         public void Run()
         {
