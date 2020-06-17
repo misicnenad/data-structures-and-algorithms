@@ -49,7 +49,7 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduc
 
 ## Authors
 
-* **Nenad Misic** - *Initial work* - [shonmisic](https://github.com/shonmisic)
+* **Nenad Misic** - *Initial work* - [misicnenad](https://github.com/misicnenad)
 
 ## License
 
