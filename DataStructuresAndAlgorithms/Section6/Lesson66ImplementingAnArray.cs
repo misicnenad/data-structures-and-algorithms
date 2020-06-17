@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 
+using Collections.Extensions.ToPyString;
+
 namespace DataStructuresAndAlgorithms.Section6
 {
     public class Lesson66ImplementingAnArray
@@ -69,7 +71,7 @@ namespace DataStructuresAndAlgorithms.Section6
             public override string ToString()
             {
                 var array = _data.Select((d, i) => $"{i}: '{d}'");
-                return $"{{ length: {_length}, data: {{ {string.Join(", ", array)} }} }}";
+                return $"{{ length: {_length}, data: {{ {array.ToPyString()} }} }}";
             }
         }
     }

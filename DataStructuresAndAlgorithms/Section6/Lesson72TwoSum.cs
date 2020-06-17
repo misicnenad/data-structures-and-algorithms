@@ -1,5 +1,7 @@
 ﻿using System;
 
+using Collections.Extensions.ToPyString;
+
 namespace DataStructuresAndAlgorithms.Section6
 {
     public class Lesson72TwoSum
@@ -11,7 +13,7 @@ namespace DataStructuresAndAlgorithms.Section6
             nums = nums ?? _defaultNums;
 
             var result = TwoSum(nums, target);
-            Console.WriteLine(string.Join(", ", result));
+            Console.WriteLine(result.ToPyString());
         }
 
         private static int[] TwoSum(int[] nums, int target)

@@ -75,25 +75,67 @@ namespace DataStructuresAndAlgorithms.Section10
                 var currentNode = Root;
                 while (true)
                 {
-                    switch (value < currentNode.Value, currentNode.Left, currentNode.Right)
+                    if (value < currentNode.Value)
                     {
-                        case (true, null, _):
+                        if (currentNode.Left == null)
+                        {
                             currentNode.Left = newNode;
                             return this;
-                        case (true, _, _):
+                        }
+                        else
+                        {
                             currentNode = currentNode.Left;
-                            break;
-                        case (_, _, null):
+                        }
+                    }
+                    else
+                    {
+                        if (currentNode.Right == null)
+                        {
                             currentNode.Right = newNode;
                             return this;
-                        case (_, _, _):
+                        }
+                        else
+                        {
                             currentNode = currentNode.Right;
-                            break;
-                        default:
-                            throw new NotImplementedException($"({value < currentNode.Value}, {currentNode.Left}, {currentNode.Right})");
+                        }
                     }
                 }
             }
+
+            //
+            //
+            //
+            // ATTENTION: method below is the same as above, but uses pattern matching and requires 
+            // the project to use C# version 8.
+            //
+            // To enable it, go to DataStructuresAndAlgorithms.csproj and in <PropertyGroup> tag insert
+            // the tag below:
+            //              "<LangVersion>8</LangVersion>" (without quotes)
+            //
+            //private BinarrySearchTree InsertPatternMatchingInternal(int value, Node newNode)
+            //{
+            //    var currentNode = Root;
+            //    while (true)
+            //    {
+            //        switch (value < currentNode.Value, currentNode.Left, currentNode.Right)
+            //        {
+            //            case (true, null, _):
+            //                currentNode.Left = newNode;
+            //                return this;
+            //            case (true, _, _):
+            //                currentNode = currentNode.Left;
+            //                break;
+            //            case (_, _, null):
+            //                currentNode.Right = newNode;
+            //                return this;
+            //            case (_, _, _):
+            //                currentNode = currentNode.Right;
+            //                break;
+            //            default:
+            //                throw new NotImplementedException($"({value < currentNode.Value}, {currentNode.Left}, {currentNode.Right})");
+            //        }
+            //    }
+            //}
         }
 
         private class Node

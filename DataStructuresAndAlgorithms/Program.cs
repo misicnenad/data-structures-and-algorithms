@@ -2,6 +2,8 @@
 using DataStructuresAndAlgorithms.Section7;
 using DataStructuresAndAlgorithms.Section8;
 using DataStructuresAndAlgorithms.Section10;
+using DataStructuresAndAlgorithms.Section12;
+using DataStructuresAndAlgorithms.Section13;
 
 namespace DataStructuresAndAlgorithms
 {
@@ -9,7 +11,7 @@ namespace DataStructuresAndAlgorithms
     {
         static void Main(string[] args)
         {
-            var lesson = new Lesson134SolutionRemove();
+            var lesson = new Lesson79SolutionImplementAHashTable();
             lesson.Run();
         }
     }

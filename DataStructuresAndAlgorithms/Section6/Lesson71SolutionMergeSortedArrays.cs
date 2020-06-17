@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 
+using Collections.Extensions.ToPyString;
+
 namespace DataStructuresAndAlgorithms.Section6
 {
     public class Lesson71SolutionMergeSortedArrays
@@ -11,7 +13,7 @@ namespace DataStructuresAndAlgorithms.Section6
             var array2 = new int[] { 4, 6, 30 };
             var result = MergeSortedArrays(array1, array2);
 
-            Console.WriteLine(string.Join(" ", result));
+            Console.WriteLine(result.ToPyString());
         }
 
         private static int[] MergeSortedArrays(int[] array1, int[] array2)

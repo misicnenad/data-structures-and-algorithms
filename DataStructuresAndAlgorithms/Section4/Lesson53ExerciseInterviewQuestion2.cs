@@ -46,7 +46,7 @@ namespace DataStructuresAndAlgorithms.Section4
             var map = new Dictionary<object, bool>();
             for (var i = 0; i < arr1.Length; i++)
             {
-                map.TryAdd(arr1[i], true);
+                map[arr1[i]] = true;
             }
 
             // loop through second array and check

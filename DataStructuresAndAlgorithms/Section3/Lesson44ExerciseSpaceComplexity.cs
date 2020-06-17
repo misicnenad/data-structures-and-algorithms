@@ -1,5 +1,7 @@
 ﻿using System;
 
+using Collections.Extensions.ToPyString;
+
 namespace DataStructuresAndAlgorithms.Section3
 {
     public class Lesson44ExerciseSpaceComplexity
@@ -11,7 +13,7 @@ namespace DataStructuresAndAlgorithms.Section3
             Booooo(array);
 
             var hiArray = ArrayOfHiNTimes(6);
-            Console.WriteLine(string.Join(" ", hiArray));
+            Console.WriteLine(hiArray.ToPyString());
         }
 
         // Space complexity value: O(1)

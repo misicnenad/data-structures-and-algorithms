@@ -90,10 +90,10 @@ namespace DataStructuresAndAlgorithms.Section8
 
         public void ReverseRecursive()
         {
-            ReverseInternal(null, Head);
+            ReverseInner(null, Head);
         }
 
-        private void ReverseInternal(Node previous, Node current)
+        private void ReverseInner(Node previous, Node current)
         {
             if (current.Next == null)
             {
@@ -101,7 +101,7 @@ namespace DataStructuresAndAlgorithms.Section8
             }
             else
             {
-                ReverseInternal(current, current.Next);
+                ReverseInner(current, current.Next);
             }
 
             Tail = current;

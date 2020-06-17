@@ -42,37 +42,47 @@ namespace DataStructuresAndAlgorithms.Section6
             return new string(charArray);
         }
 
-        private static string ReverseCSharpWayMoreEfficient(string str)
-        {
-            return string.Create(str.Length, str, (chars, state) =>
-            {
-                var enumerator = StringInfo.GetTextElementEnumerator(state);
-                var position = state.Length;
-                while (enumerator.MoveNext())
-                {
-                    var cluster = ((string) enumerator.Current).AsSpan();
-                    cluster.CopyTo(chars.Slice(position - cluster.Length));
-                    position -= cluster.Length;
-                }
-            });
-        }
+        //
+        //
+        //
+        // ATTENTION: two methods below require the project to target .NET Standard 2.0.
+        //
+        // To target it, go to DataStructuresAndAlgorithms.csproj and in <PropertyGroup> tag insert
+        // this tag:
+        //          "<TargetFramework>netstandard2.1</TargetFramework>" (without quotes)
+        //
+        //
+        //private static string ReverseCSharpWayMoreEfficient(string str)
+        //{
+        //    return string.Create(str.Length, str, (chars, state) =>
+        //    {
+        //        var enumerator = StringInfo.GetTextElementEnumerator(state);
+        //        var position = state.Length;
+        //        while (enumerator.MoveNext())
+        //        {
+        //            var cluster = ((string) enumerator.Current).AsSpan();
+        //            cluster.CopyTo(chars.Slice(position - cluster.Length));
+        //            position -= cluster.Length;
+        //        }
+        //    });
+        //}
 
-        private static string ReverseCSharpWayMostEfficient(string str)
-        {
-            return string.Create(str.Length, str, (chars, state) =>
-            {
-                var position = 0;
-                var stateSpan = state.AsSpan();
-                var indexes = StringInfo.ParseCombiningCharacters(state); // skips string creation
-                var len = indexes.Length;
-                for (var i = len - 1; i >= 0; i--)
-                {
-                    var index = indexes[i];
-                    var spanLength = i == len - 1 ? state.Length - index : indexes[i + 1] - index;
-                    stateSpan.Slice(index, spanLength).CopyTo(chars.Slice(position));
-                    position += spanLength;
-                }
-            });
-        }
+        //private static string ReverseCSharpWayMostEfficient(string str)
+        //{
+        //    return string.Create(str.Length, str, (chars, state) =>
+        //    {
+        //        var position = 0;
+        //        var stateSpan = state.AsSpan();
+        //        var indexes = StringInfo.ParseCombiningCharacters(state); // skips string creation
+        //        var len = indexes.Length;
+        //        for (var i = len - 1; i >= 0; i--)
+        //        {
+        //            var index = indexes[i];
+        //            var spanLength = i == len - 1 ? state.Length - index : indexes[i + 1] - index;
+        //            stateSpan.Slice(index, spanLength).CopyTo(chars.Slice(position));
+        //            position += spanLength;
+        //        }
+        //    });
+        //}
     }
 }

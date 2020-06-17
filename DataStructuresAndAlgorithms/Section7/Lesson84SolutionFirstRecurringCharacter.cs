@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
+
+using Collections.Extensions.ToPyString;
 
 namespace DataStructuresAndAlgorithms.Section7
 {
@@ -47,14 +48,9 @@ namespace DataStructuresAndAlgorithms.Section7
                 {
                     map[input[i]] = i;
                 }
-                Console.WriteLine(DictionaryToString(map));
+                Console.WriteLine(map.ToPyString());
             }
             return null;
-        }
-
-        private static string DictionaryToString(Dictionary<int, int> dict)
-        {
-            return $"{{ {string.Join(", ", dict.Select(x => x.Key + ": " + x.Value).ToArray())} }}";
         }
     }
 }

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 
+using Collections.Extensions.ToPyString;
+
 namespace DataStructuresAndAlgorithms.Section6
 {
     public class Lesson62ArraysIntroduction
@@ -33,7 +35,7 @@ namespace DataStructuresAndAlgorithms.Section6
             // There is no C# equivalent to JavaScript's "splice"
             strings.Insert(2, "alien"); // O(n)
 
-            Console.WriteLine(string.Join(" ", strings));
+            Console.WriteLine(strings.ToPyString());
         }
 
         private static void ShowcaseArrays()
@@ -46,8 +48,8 @@ namespace DataStructuresAndAlgorithms.Section6
             strings = strings.Append("e").ToArray(); // O(n)
 
             // C# doesn't have the JavaScript "pop" method for arrays
-            strings = strings.SkipLast(1).ToArray();
-            strings = strings.SkipLast(1).ToArray(); // O(n)
+            strings = strings.Take(strings.Length - 1).ToArray();
+            strings = strings.Take(strings.Length - 1).ToArray(); // O(n)
 
             // Same as JavaScript "unshift" method
             strings = strings.Prepend("x").ToArray(); // O(n)
@@ -58,7 +60,7 @@ namespace DataStructuresAndAlgorithms.Section6
             tempList.Insert(2, "alien");
             strings = tempList.ToArray();
 
-            Console.WriteLine(string.Join(" ", strings));
+            Console.WriteLine(strings.ToPyString());
         }
     }
 }
