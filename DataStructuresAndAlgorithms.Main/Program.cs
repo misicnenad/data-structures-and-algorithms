@@ -29,7 +29,7 @@ namespace DataStructuresAndAlgorithms.Main
         {
             var lessonTypes = typeof(IBaseLesson).Assembly.GetTypes()
                 .Where(type => type.GetInterfaces()
-                    .Any(i => i.IsGenericType && i.GetGenericTypeDefinition() == typeof(IBaseLesson)));
+                    .Any(i => i == typeof(IBaseLesson)));
 
             return lessonTypes.ToDictionary(GetKey, GetValue);
         }

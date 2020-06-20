@@ -5,10 +5,29 @@ namespace DataStructuresAndAlgorithms.Lessons.Section12
 {
     public class Lesson157SolutionFibonacci : IBaseLesson
     {
-        public void Run(int number = 7)
+        public void Run()
         {
-            var result = FibonacciRecursive(number);
+            var length = GetFibSequenceLength();
+            if (length == null)
+            {
+                Console.WriteLine("Oops, invalid input");
+                return;
+            }
+
+            var result = FibonacciRecursive(length.Value);
             Console.WriteLine(result);
+        }
+
+        private int? GetFibSequenceLength()
+        {
+            Console.Write("Input the length of the Fibonacci sequence: ");
+            var input = Console.ReadLine().Trim();
+            if (int.TryParse(input, out var sum))
+            {
+                return sum;
+            }
+
+            return null;
         }
 
         // Time "Big O": O(n)

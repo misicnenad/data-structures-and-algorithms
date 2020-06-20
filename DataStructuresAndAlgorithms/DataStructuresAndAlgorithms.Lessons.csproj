@@ -1,13 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <!-- Uncomment the line below if you're targeting .NET Framework and update the version-->
-    <!--<TargetFramework>net472</TargetFramework>-->
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Collections.Extensions.ToPyString" Version="1.0.4" />
+    <PackageReference Include="Collections.Extensions.ToPyString" Version="1.1.2" />
   </ItemGroup>
 
 </Project>

@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Linq;
 using System.Text;
+
+using Collections.Extensions.ToPyString;
 
 namespace DataStructuresAndAlgorithms.Lessons.Section8
 {
@@ -7,15 +10,38 @@ namespace DataStructuresAndAlgorithms.Lessons.Section8
     {
         private static readonly object[] _defaultArray = new object[] { 2, 5, 1, 3, 4 };
 
-        public void Run(object[] array = null)
+        public void Run()
         {
-            array = array ?? _defaultArray;
+            var array = GetArray();
+            if (array == null)
+            {
+                Console.WriteLine("Oops, invalid input");
+                return;
+            }
 
             var linkedList = new LinkedList(array);
 
             Console.WriteLine(linkedList);
             linkedList.Reverse();
             Console.WriteLine(linkedList);
+        }
+
+        private static object[] GetArray()
+        {
+            Console.Write("Input comma separated array (or press \"Enter\" for the default array): ");
+            var input = Console.ReadLine().Trim();
+            var array = _defaultArray;
+            if (!string.IsNullOrEmpty(input))
+            {
+                array = input.Split(',').Select(c => c.Trim()).ToArray();
+                if (array.Length == 0)
+                {
+                    return null;
+                }
+            }
+
+            Console.Write("Input array is: " + array.ToPyString());
+            return array;
         }
     }
 

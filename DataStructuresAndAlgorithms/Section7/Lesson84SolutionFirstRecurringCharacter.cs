@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 using Collections.Extensions.ToPyString;
 
@@ -7,18 +8,41 @@ namespace DataStructuresAndAlgorithms.Lessons.Section7
 {
     public class Lesson84SolutionFirstRecurringCharacter : IBaseLesson
     {
-        private static readonly int[] _defaultArray = new int[] { 2, 5, 1, 2, 3, 5, 1, 2, 4 };
+        private static readonly object[] _defaultArray = new object[] { 2, 5, 1, 2, 3, 5, 1, 2, 4 };
 
-        public void Run(int[] array = null)
+        public void Run()
         {
-            array = array ?? _defaultArray;
+            var array = GetArray();
+            if (array == null)
+            {
+                Console.WriteLine("Oops, invalid input");
+                return;
+            }
 
             var result = FirstRecurringCharacter2(array);
-            Console.WriteLine(result);
+            Console.WriteLine("First reccuring character is: " + result);
+        }
+
+        private static object[] GetArray()
+        {
+            Console.Write("Input comma separated array (or press \"Enter\" for the default array): ");
+            var input = Console.ReadLine().Trim();
+            var array = _defaultArray;
+            if (!string.IsNullOrEmpty(input))
+            {
+                array = input.Split(',').Select(c => c.Trim()).ToArray();
+                if (array.Length == 0)
+                {
+                    return null;
+                }
+            }
+
+            Console.Write("Input array is: " + array.ToPyString());
+            return array;
         }
 
         // "Big O": O(n^2)
-        private static int? FirstRecurringCharacter(int[] input)
+        private static object FirstRecurringCharacter(object[] input)
         {
             for (var i = 0; i < input.Length-1; i++)
             {
@@ -35,9 +59,9 @@ namespace DataStructuresAndAlgorithms.Lessons.Section7
         }
 
         // "Big O": O(n)
-        private static int? FirstRecurringCharacter2(int[] input)
+        private static object FirstRecurringCharacter2(object[] input)
         {
-            var map = new Dictionary<int, int>();
+            var map = new Dictionary<object, object>();
             for (var i = 0; i < input.Length; i++)
             {
                 if (map.ContainsKey(input[i]))

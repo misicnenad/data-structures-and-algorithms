@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+
+using Collections.Extensions.ToPyString;
 
 namespace DataStructuresAndAlgorithms.Lessons.Section6
 {
@@ -6,13 +10,47 @@ namespace DataStructuresAndAlgorithms.Lessons.Section6
     {
         private static readonly int[] _defaultArray = new int[] { -2, 1, -3, 4, -1, 2, 1, -5, 4 };
 
-        public void Run(int[] array = null)
+        public void Run()
         {
-            array = array ?? _defaultArray;
+            var array = GetArray();
+            if (array == null)
+            {
+                Console.WriteLine("Oops, invalid input");
+                return;
+            }
 
             var result = MaxSubarrayBigON(array);
 
             Console.WriteLine(result);
+        }
+
+        private static int[] GetArray()
+        {
+            Console.Write("Input comma separated array of integers (or press \"Enter\" for the default array): ");
+            var input = Console.ReadLine().Trim();
+            IList<int> list = _defaultArray;
+            if (!string.IsNullOrEmpty(input))
+            {
+                var strArray = input.Split(',').Select(c => c.Trim()).ToArray();
+                if (strArray.Length == 0)
+                {
+                    return null;
+                }
+
+                list = new List<int>();
+                foreach (var item in strArray)
+                {
+                    if (!int.TryParse(item, out var res))
+                    {
+                        Console.WriteLine($"Can't parse {item} into an integer :(");
+                        return null;
+                    }
+                    list.Add(res);
+                }
+            }
+
+            Console.Write("Input array is: " + list.ToPyString());
+            return list.ToArray();
         }
 
         // Explanation: Set a maximum sum to a minimum int value

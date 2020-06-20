@@ -4,10 +4,29 @@ namespace DataStructuresAndAlgorithms.Lessons.Section12
 {
     public class Lesson155SolutionFactorial : IBaseLesson
     {
-        public void Run(int number = 5)
+        public void Run()
         {
-            var result = FindFactorialIterative(number);
+            var number = GetNumber();
+            if (number == null)
+            {
+                Console.WriteLine("Oops, invalid input");
+                return;
+            }
+
+            var result = FindFactorialIterative(number.Value);
             Console.WriteLine(result);
+        }
+
+        private int? GetNumber()
+        {
+            Console.Write("Input the number for which you want a factorial: ");
+            var input = Console.ReadLine().Trim();
+            if (int.TryParse(input, out var sum))
+            {
+                return sum;
+            }
+
+            return null;
         }
 
         // "Big O": O(n)
