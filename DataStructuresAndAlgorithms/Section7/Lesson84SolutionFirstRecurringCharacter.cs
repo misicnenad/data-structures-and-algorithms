@@ -37,7 +37,7 @@ namespace DataStructuresAndAlgorithms.Lessons.Section7
                 }
             }
 
-            Console.Write("Input array is: " + array.ToPyString());
+            Console.Write("Input array is: " + array.ToPyString() + Environment.NewLine);
             return array;
         }
 
