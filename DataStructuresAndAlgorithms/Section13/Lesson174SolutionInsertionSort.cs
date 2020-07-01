@@ -5,7 +5,7 @@ using Collections.Extensions.ToPyString;
 
 namespace DataStructuresAndAlgorithms.Lessons.Section13
 {
-    public class Lesson170SolutionSelectionSort : IBaseLesson
+    public class Lesson174SolutionInsertionSort : IBaseLesson
     {
         private static readonly IList<int> _defaultList = new List<int> { 56, 1, 99, 4, 21, 2, 6, 5, 14 };
 
@@ -19,29 +19,35 @@ namespace DataStructuresAndAlgorithms.Lessons.Section13
             }
 
             Console.WriteLine("Original array: " + array.ToPyString());
-            
-            var sortedArray = GetSelectionSortedArray(array);
+
+            var sortedArray = GetInsertionSortedArray(array);
 
             Console.WriteLine("Sorted array: " + sortedArray.ToPyString());
         }
 
-        private static IList<int> GetSelectionSortedArray(IList<int> array)
+        private static IList<int> GetInsertionSortedArray(IList<int> array)
         {
-            var len = array.Count;
+            var length = array.Count;
 
-            for (var pos = 0; pos < len - 1; pos++)
+            for (var i = 1; i < length; i++)
             {
-                var smallestIndex = pos;
-                for (var current = smallestIndex + 1; current < len; current++)
+                var current = array[i];
+                if (current < array[0])
                 {
-                    if (array[smallestIndex] > array[current])
+                    array.RemoveAt(i);
+                    array.Insert(0, current);
+                }
+                else
+                {
+                    for (var j = 1; j < i; j++)
                     {
-                        smallestIndex = current;
+                        if (array[i] > array[j-1] && array[i] < array[j])
+                        {
+                            array.RemoveAt(i);
+                            array.Insert(j, current);
+                        }
                     }
                 }
-                var temp = array[pos];
-                array[pos] = array[smallestIndex];
-                array[smallestIndex] = temp;
             }
 
             return array;
@@ -51,10 +57,10 @@ namespace DataStructuresAndAlgorithms.Lessons.Section13
         {
             Console.WriteLine("Please insert a comma-separated array of integers (no spaces) or press \"Enter\" to use the input example below.");
             Console.WriteLine($"Input example: {string.Join(",", _defaultList)}\n");
-            
+
             Console.Write("Input: ");
             var input = Console.ReadLine();
-            
+
             if (string.IsNullOrWhiteSpace(input))
             {
                 array = _defaultList;
